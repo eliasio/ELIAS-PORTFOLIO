@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stage 2</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 Trial Version - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/portfolio_elias.css" rel="stylesheet">
+<link href="css/stage-2.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      TimerStartTimer1();
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#skills']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skills').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("#PanelLayer").panel({animate: true, animationDuration: 500, animationEasing: 'easeOutElastic', dismissible: false, display: 'push', position: 'left'});
+      $('.OverlayMenu1 .item-has-children').children('a').on('click', function(event)
+      {
+         event.preventDefault();
+         $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(0,'linear').end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(0,'linear');
+      });
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_PanelMenu1" style="display:inline-block;width:48px;height:48px;z-index:0;">
+                  <a href="#PanelLayer" id="PanelMenu1">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_intro">
+      <div id="intro-divider-top">
+         <svg version="1.1" viewBox="0 0 240 24" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.33" d="M0,13.229V23.87h240V13.27C212.247,6.884,170.508,0,119.81,0 C69.18,0,27.642,6.884,0,13.229z"/>
+            <path class="divider-fill" style="opacity:0.33" d="M0,18.904V24h240v-5.036c-21.641-6.315-64.639-16.257-120.171-16.257 C64.351,2.707,21.572,12.589,0,18.904z"/>
+            <path class="divider-fill" d="M119.829,5.115C47.852,5.115,0,24,0,24h239.961C239.961,24,191.816,5.115,119.829,5.115z"/>
+         </svg>
+      </div>
+      <div id="intro-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+            </path>
+         </svg></div>
+      <div id="intro">
+         <div class="col-1">
+            <div id="wb_TextArt3" style="display:inline-block;width:227px;height:35px;z-index:1;position:relative;">
+               <img src="images/img0011.png" id="TextArt3" alt="STAGE 2" title="STAGE 2" width="227" height="35" style="width:227px;height:35px;">
+            </div>
+            <div id="wb_homeText">
+               <p style="font-size:13px;line-height:16px;">&nbsp;</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_skills">
+      <div id="skills-overlay"></div>
+      <div id="skills">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_Image3" style="display:block;width:100%;height:auto;z-index:3;">
+                                    <img src="me.webp" id="Image3" alt="" width="719" height="719">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:16;">
+      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:5;">
+         <a href="#intro"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid2">
+      <div id="servicesLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <div id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="font-size:16px;font-weight:bold;line-height:21.6px;">&nbsp;</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="PanelLayer" style="text-align:right;">
+      <div id="wb_Heading3" style="display:block;width:100%;z-index:10;">
+         <h1 id="Heading3">MENU</h1>
+      </div>
+      <div id="wb_OverlayMenu1" style="display:inline-block;width:306px;height:152px;z-index:11;">
+         <div class="OverlayMenu1">
+            <ul class="OverlayMenu1" role="menu">
+               <li><a role="menuitem" href="./index.html" class="OverlayMenu1-effect">Accueil</a></li>
+               <li class="item-has-children">
+                  <a role="menuitem" href="./stages.html" class="OverlayMenu1-effect">STAGES</a>
+                  <ul class="sub-menu" role="menu">
+                     <li><a role="menuitem" href="./stage-1.html" class="OverlayMenu1-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;1</a></li>
+                     <li><a role="menuitem" href="./stages.html" class="OverlayMenu1-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;2</a></li>
+                  </ul>
+               </li>
+               <li><a role="menuitem" href="./ateliers.html" class="OverlayMenu1-effect">ATELIERS</a></li>
+               <li><a role="menuitem" href="./veille.html" class="OverlayMenu1-effect">VEILLE</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <script>   
+   var wb_Timer1;
+   function TimerStartTimer1()
+   {
+      wb_Timer1 = setTimeout(function()
+      {
+         var event = null;
+         ShowPanel('PanelLayer', event);
+      }, 500);
+   }
+   function TimerStopTimer1()
+   {
+      clearTimeout(wb_Timer1);
+   }
+   </script>
+   <a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:1651px;top:4035px;margin:0;border-width:0;z-index:250" width="16" height="16"></a>
+</body>
+</html>
