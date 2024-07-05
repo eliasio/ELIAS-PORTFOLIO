@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>STAGES</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 Trial Version - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/portfolio_elias.css" rel="stylesheet">
+<link href="css/stages.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wb.panel.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      TimerStartTimer1();
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#skills']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skills').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("#PanelLayer").panel({animate: true, animationDuration: 500, animationEasing: 'easeOutElastic', dismissible: false, display: 'push', position: 'left'});
+      $('.OverlayMenu1 .item-has-children').children('a').on('click', function(event)
+      {
+         event.preventDefault();
+         $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(0,'linear').end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(0,'linear');
+      });
+      $('.OverlayMenu2 .item-has-children').children('a').on('click', function(event)
+      {
+         event.preventDefault();
+         $(this).toggleClass('submenu-open').next('.sub-menu').slideToggle(0,'linear').end().parent('.item-has-children').siblings('.item-has-children').children('a').removeClass('submenu-open').next('.sub-menu').slideUp(0,'linear');
+      });
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script>
+</head>
+<body>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+               <div id="wb_PanelMenu1" style="display:inline-block;width:48px;height:48px;z-index:0;">
+                  <a href="#PanelLayer" id="PanelMenu1">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_intro">
+      <div id="intro-divider-top">
+         <svg version="1.1" viewBox="0 0 240 24" preserveAspectRatio="none">
+            <path class="divider-fill" style="opacity:0.33" d="M0,13.229V23.87h240V13.27C212.247,6.884,170.508,0,119.81,0 C69.18,0,27.642,6.884,0,13.229z"/>
+            <path class="divider-fill" style="opacity:0.33" d="M0,18.904V24h240v-5.036c-21.641-6.315-64.639-16.257-120.171-16.257 C64.351,2.707,21.572,12.589,0,18.904z"/>
+            <path class="divider-fill" d="M119.829,5.115C47.852,5.115,0,24,0,24h239.961C239.961,24,191.816,5.115,119.829,5.115z"/>
+         </svg>
+      </div>
+      <div id="intro-divider-bottom">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path class="divider-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z">
+            </path>
+         </svg></div>
+      <div id="intro">
+         <div class="col-1">
+            <div id="wb_TextArt3" style="display:inline-block;width:298px;height:40px;z-index:1;position:relative;">
+               <img src="images/img0003.png" id="TextArt3" alt="STAGES" title="STAGES" width="298" height="40" style="width:298px;height:40px;">
+            </div>
+            <div id="wb_homeText">
+               <p>PORTFOLIO BTS SIO </p>
+               <p>2023/2025</p>
+            </div>
+            <div id="wb_Image2" style="display:block;width:100%;height:auto;z-index:3;">
+               <img src="stage.webp" id="Image2" alt="" width="970" height="545">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_skills">
+      <div id="skills-overlay"></div>
+      <div id="skills">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Skills</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1" style="display:block;width:100%;line-height:16px;z-index:5;">HTML</label>
+                                 <div id="skillsProgressbar1" style="display:block;width:100%;height:14px;z-index:6;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" title="" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <label for="" id="skillsLabel2" style="display:block;width:100%;line-height:16px;z-index:7;">CSS</label>
+                                 <div id="skillsProgressbar2" style="display:block;width:100%;height:14px;z-index:8;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" title="" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <label for="" id="skillsLabel3" style="display:block;width:100%;line-height:16px;z-index:9;">JavaScript</label>
+                                 <div id="skillsProgressbar3" style="display:block;width:100%;height:14px;z-index:10;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" title="" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                                 <label for="" id="skillsLabel4" style="display:block;width:100%;line-height:16px;z-index:11;">PHP:</label>
+                                 <div id="skillsProgressbar4" style="display:block;width:100%;height:14px;z-index:12;">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" title="" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="font-size:24px;line-height:27.5px;font-weight:bold;">&nbsp;</p>
+                                    <p style="font-size:19px;line-height:21px;font-weight:bold;">Eleve en BTS SIO option SISR, je regroupe ici divers sections me concernant.</p>
+                                    <p style="font-size:24px;line-height:27.5px;font-weight:bold;">&nbsp;</p>
+                                 </div>
+                                 <div id="wb_Image3" style="display:block;width:100%;height:auto;z-index:15;">
+                                    <img src="me.webp" id="Image3" alt="" width="440" height="440">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_TextArt2" style="display:inline-block;width:319px;height:140px;z-index:17;position:relative;">
+                     <img src="images/img0004.png" id="TextArt2" alt=" La signification  SIO" title=" La signification  SIO" width="319" height="140" style="width:319px;height:140px;">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:56;">
+      <div id="wb_up-arrow" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:18;">
+         <a href="#intro"><div id="up-arrow"><i class="fa fa-angle-up"></i></div></a></div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" style="display:flex;width:100%;z-index:31;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><a href="http://"><i class="fa fa-globe"></i></a></div>
+                        <div id="servicesCard1-card-item1">Services</div>
+                        <div id="servicesCard1-card-item2">Le terme "service" dans "service informatique aux organisations" fait référence à un ensemble d'activités et de ressources qui fournissent un soutien informatique aux opérations et aux objectifs des organisations. </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" style="display:flex;width:100%;z-index:32;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><a href="http://"><i class="fa fa-code"></i></a></div>
+                        <div id="servicesCard2-card-item1">Informatique</div>
+                        <div id="servicesCard2-card-item2">Le terme "informatique" fait référence à l'ensemble des technologies, des systèmes, des logiciels et des processus utilisés pour stocker, traiter, récupérer et transmettre des données et des informations au sein d'une organisation.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" style="display:flex;width:100%;z-index:33;" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><a href="http://"><i class="fa fa-male"></i></a></div>
+                        <div id="servicesCard3-card-item1">Organisations</div>
+                        <div id="servicesCard3-card-item2">Le terme "organisations" fait référence à des entités, qu'elles soient à but lucratif ou non, qui utilisent des systèmes informatiques et des technologies de l'information pour soutenir leurs opérations, leurs processus métier et leurs objectifs stratégiques.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid2">
+      <div id="servicesLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_contactForm">
+                     <div id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_contactText1">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;line-height:18px;font-weight:bold;"><span style="font-size:24px;line-height:27.5px;">Contactez-moi !</span></p>
+                                 </div>
+                                 <input type="text" id="contactName" style="display:block;width:100%;height:42px;z-index:35;" name="Nom" value="" spellcheck="false" placeholder="Nom">
+                                 <input type="text" id="contactEmail" style="display:block;width:100%;height:42px;z-index:36;" name="email" value="" spellcheck="false" placeholder="Email">
+                                 <input type="text" id="contactSubject" style="display:block;width:100%;height:42px;z-index:37;" name="Sujet" value="" spellcheck="false" placeholder="Sujet">
+                                 <textarea name="message" id="contactMessage" style="display:block;width:100%;;height:108px;z-index:38;" rows="4" cols="39" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
+                                 <input type="submit" id="contactButton" name="Envoyer" value="Envoyer" style="display:inline-block;width:128px;height:33px;z-index:39;">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="font-size:16px;font-weight:bold;line-height:21.6px;">&nbsp;</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="PanelLayer" style="text-align:right;">
+      <div id="wb_Image1" style="display:block;width:100%;height:auto;z-index:49;">
+         <img src="images/alicia_250x250.png" id="Image1" alt="">
+      </div>
+      <div id="wb_Heading3" style="display:block;width:100%;z-index:50;">
+         <h1 id="Heading3">MENU</h1>
+      </div>
+      <div id="wb_OverlayMenu1" style="display:inline-block;width:306px;height:152px;z-index:51;">
+         <div class="OverlayMenu1">
+            <ul class="OverlayMenu1" role="menu">
+               <li><a role="menuitem" href="./index.html" class="OverlayMenu1-effect">Accueil</a></li>
+               <li class="item-has-children">
+                  <a role="menuitem" href="./stages.html" class="OverlayMenu1-effect">STAGES</a>
+                  <ul class="sub-menu" role="menu">
+                     <li><a role="menuitem" href="./stage-1.html" class="OverlayMenu1-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;1</a></li>
+                     <li><a role="menuitem" href="./stage-2.html" class="OverlayMenu1-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;2</a></li>
+                  </ul>
+               </li>
+               <li><a role="menuitem" href="./ateliers.html" class="OverlayMenu1-effect">ATELIERS</a></li>
+               <li><a role="menuitem" href="./veille.html" class="OverlayMenu1-effect">VEILLE</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <script>   
+   var wb_Timer1;
+   function TimerStartTimer1()
+   {
+      wb_Timer1 = setTimeout(function()
+      {
+         var event = null;
+         ShowPanel('PanelLayer', event);
+      }, 500);
+   }
+   function TimerStopTimer1()
+   {
+      clearTimeout(wb_Timer1);
+   }
+   </script>
+   <a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:1651px;top:4035px;margin:0;border-width:0;z-index:250" width="16" height="16"></a>
+   <div id="wb_OverlayMenu2" style="position:absolute;left:1007px;top:500px;width:306px;height:152px;z-index:63;">
+      <div class="OverlayMenu2">
+         <ul class="OverlayMenu2" role="menu">
+            <li><a role="menuitem" href="#" class="OverlayMenu2-effect">Accueil</a></li>
+            <li class="item-has-children">
+               <a role="menuitem" href="#" class="OverlayMenu2-effect">STAGES</a>
+               <ul class="sub-menu" role="menu">
+                  <li><a role="menuitem" href="#" class="OverlayMenu2-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;1</a></li>
+                  <li><a role="menuitem" href="#" class="OverlayMenu2-effect"><i class="fa fa-info overlay-icon"></i>Stage&nbsp;2</a></li>
+               </ul>
+            </li>
+            <li><a role="menuitem" href="#" class="OverlayMenu2-effect">ATELIERS</a></li>
+            <li><a role="menuitem" href="#" class="OverlayMenu2-effect">VEILLE</a></li>
+            <li><a role="menuitem" href="#" class="OverlayMenu2-effect">A&nbsp;propos</a></li>
+         </ul>
+      </div>
+   </div>
+</body>
+</html>
